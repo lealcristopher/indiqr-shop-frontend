@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── HEADER ───────────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="header-logo">
+    <a href="/" class="site-logo">
+      {% if site.logo_url %}
+        <img src="{{ site.logo_url }}" alt="{{ site.name }}" class="site-logo-img">
+      {% else %}
+        {{ site.name }}
+      {% endif %}
+    </a>
+  </div>
+
+  <nav class="header-nav">
+    <button class="nav-link active" data-cat="0">Tudo</button>
+    {% for cat in categories %}
+    <button class="nav-link" data-cat="{{ cat.id }}">{{ cat.name }}</button>
+    {% endfor %}
+  </nav>
+</header>
+
+<!-- ── HERO ─────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg"
+    {% if hero.image_url %}style="background-image: url('{{ hero.image_url }}')"{% endif %}>
+    <div class="hero-bg-placeholder"></div>
+    <div class="hero-bg-label">imagem hero — url via data.json</div>
+  </div>
+  <div class="hero-box">
+    <h1 class="hero-title">{{ hero.default_title }}</h1>
+    <p class="hero-sub">{{ hero.default_subtitle }}</p>
+  </div>
+</section>
+
+<!-- ── CATEGORY CAROUSEL ────────────────────────────────────── -->
+<section class="categories">
+  <div class="categories-header">
+    <span class="section-label">Categorias</span>
+    <div class="carousel-controls">
+      <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+      <button class="carousel-btn next" aria-label="Próximo">›</button>
+    </div>
+  </div>
+
+  <div class="carousel-track">
+    {% for cat in categories %}
+    <div class="category-card" data-cat="{{ cat.id }}">
+      <div class="category-img {% if not cat.image_url %}placeholder{% endif %}">
+        {% if cat.image_url %}
+          <img src="{{ cat.image_url }}" alt="{{ cat.name }}">
+        {% else %}
+          <span>{{ cat.name }}</span>
+        {% endif %}
+      </div>
+      <p class="category-name">{{ cat.name }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── PRODUCT GRID ──────────────────────────────────────────── -->
+<section class="products">
+  <div class="products-header">
+    <h2 class="products-title">Todos os Serviços</h2>
+    <span class="products-count">{{ products | length }} serviços</span>
+  </div>
+
+  <div class="product-grid">
+    {% for product in products %}
+    <article class="product-card" data-cat="{{ product.category_id }}">
+      <div class="product-img {% if not product.image_url %}placeholder{% endif %}">
+        {% if product.image_url %}
+          <img src="{{ product.image_url }}" alt="{{ product.name }}">
+        {% else %}
+          <span>foto produto</span>
+        {% endif %}
+        {% if product.featured %}
+          <div class="product-badge">Destaque</div>
+        {% endif %}
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-desc">{{ product.description }}</p>
+        <div class="product-footer">
+          <p class="product-price">{{ "{:,}".format(product.price_points).replace(",", ".") }} pts</p>
+          <button class="btn-resgatar">Resgatar</button>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <span class="footer-logo">{{ site.name }}</span>
+  <span class="footer-tagline">{{ site.tagline }}</span>
+  <div class="footer-links">
+    <a href="{{ site.instagram }}">Instagram</a>
+    <a href="{{ site.whatsapp }}">WhatsApp</a>
+    <a href="{{ site.email }}">Contato</a>
+  </div>
+</footer>
+
+<!-- ── HERO DATA (para o JS de filtro) ──────────────────────── -->
+<script>
+window.HERO_DATA = {
+  "0": {
+    "title":    {{ hero.default_title | tojson }},
+    "subtitle": {{ hero.default_subtitle | tojson }},
+    "image_url": {{ hero.image_url | default("") | tojson }},
+    "cat_name": "Todos os Serviços"
+  }{% for cat in categories %},
+  "{{ cat.id }}": {
+    "title":    {{ cat.hero_title | tojson }},
+    "subtitle": {{ cat.hero_subtitle | tojson }},
+    "image_url": {{ cat.image_url | tojson }},
+    "cat_name": {{ cat.name | tojson }}
+  }{% endfor %}
+};
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

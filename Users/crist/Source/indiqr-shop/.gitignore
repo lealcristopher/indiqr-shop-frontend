@@ -1,0 +1,6 @@
+.wrangler/
+dist/
+__pycache__/
+*.pyc
+.env
+token.txt

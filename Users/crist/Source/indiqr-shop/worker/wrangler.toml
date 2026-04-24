@@ -1,0 +1,10 @@
+name = "indiqr-shop-worker"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[[r2_buckets]]
+binding = "SHOP_BUCKET"
+bucket_name = "indiqr-shop"
+
+[observability]
+enabled = true

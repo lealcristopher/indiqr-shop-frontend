@@ -1,0 +1,34 @@
+{
+  "site": {
+    "name": "Personalitté",
+    "logo_url": "logo.png",
+    "tagline": "Cuidado com intenção",
+    "contact": "Atendimento",
+    "instagram": "https://www.instagram.com/personalittelaser/",
+    "whatsapp": "#",
+    "email": "#"
+  },
+  "hero": {
+    "default_title": "Bem-vinda à Personalitté",
+    "default_subtitle": "Cuidado intencional para cada detalhe de você. Serviços pensados para quem valoriza o resultado.",
+    "image_url": "https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2024/02/Ultimate-Guide-To-Equipment-For-Success-In-The-Hair-And-Beauty-Industry-2.jpg"
+  },
+  "categories": [
+    { "id": 1, "name": "Rosto",   "slug": "rosto",   "image_url": "https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2024/02/Ultimate-Guide-To-Equipment-For-Success-In-The-Hair-And-Beauty-Industry-2.jpg", "hero_title": "Cuidados para o Rosto",   "hero_subtitle": "Tratamentos faciais com técnicas de alta performance para uma pele que fala por si." },
+    { "id": 2, "name": "Corpo",   "slug": "corpo",   "image_url": "https://alur.com.br/wp-content/uploads/2024/04/estetica-corporal-alur-medical.jpg", "hero_title": "Rituais para o Corpo",    "hero_subtitle": "Da cabeça aos pés — hidratação, relaxamento e renovação com ingredientes naturais." },
+    { "id": 3, "name": "Cabelo",  "slug": "cabelo",  "image_url": "https://clinicasenz.com.br/wp-content/uploads/2019/12/Cabelo-Saud%C3%A1vel.jpg", "hero_title": "Tratamentos Capilares",   "hero_subtitle": "Cronogramas e rituais personalizados para fios saudáveis e radiantes." },
+    { "id": 4, "name": "Pacotes", "slug": "pacotes", "image_url": "https://cdn.awsli.com.br/600x450/1555/1555192/produto/91145977/b7d6668743.jpg", "hero_title": "Pacotes Especiais",       "hero_subtitle": "Combine serviços e potencialize seus resultados com condições exclusivas." },
+    { "id": 5, "name": "Rituais", "slug": "rituais", "image_url": "https://royalface.com.br/wp-content/uploads/2023/06/como-ocorre-a-massagem-relaxante.jpg", "hero_title": "Rituais Exclusivos",      "hero_subtitle": "Experiências sensoriais completas para quem merece um momento só seu." }
+  ],
+  "products": [
+    { "id": 1, "name": "Limpeza de Pele Profunda",     "description": "Remoção de impurezas e renovação celular com técnicas avançadas.",                        "price_points": 350, "image_url": "https://blog.bcmed.com.br/wp-content/uploads/2024/06/Limpeza-de-pele-profunda-thegem-blog-default.png", "category_id": 1, "featured": true  },
+    { "id": 2, "name": "Peeling Enzimático",            "description": "Esfoliação suave com enzimas naturais para pele luminosa e uniforme.",                     "price_points": 280, "image_url": "https://i0.wp.com/almapreta.com.br/images/2024/06/Por-que-o-peeling-de-fenol-nao-e-indicado-para-pessoas-negras.jpg?fit=1040%2C780&ssl=1", "category_id": 1, "featured": false },
+    { "id": 3, "name": "Massagem Relaxante",            "description": "Técnica sueca para alívio profundo de tensões musculares.",                               "price_points": 420, "image_url": "https://cursos.ce.senac.br/wp-content/uploads/2022/12/MASSAGEM-RELAXANTE.jpg", "category_id": 2, "featured": false },
+    { "id": 4, "name": "Hidratação Corporal Intensiva", "description": "Tratamento com manteigas e óleos essenciais de origem natural.",                           "price_points": 320, "image_url": "https://vittaespa.com.br/wp-content/uploads/2023/06/site_layout_SPA_VITTAE_pic-32.png", "category_id": 2, "featured": false },
+    { "id": 5, "name": "Cronograma Capilar",            "description": "Diagnóstico e tratamento personalizado para a saúde dos seus fios.",                       "price_points": 380, "image_url": "https://www.hairman.com/wp-content/uploads/2022/10/hairCare.jpg", "category_id": 3, "featured": false },
+    { "id": 6, "name": "Ritual Completo",               "description": "Experiência integrada de rosto, corpo e cabelo — um dia só para você.",                   "price_points": 890, "image_url": "https://st4.depositphotos.com/4218696/37884/i/450/depositphotos_378844872-stock-photo-peaceful-black-woman-getting-head.jpg", "category_id": 4, "featured": true  },
+    { "id": 7, "name": "Microagulhamento",              "description": "Estimulação da produção de colágeno para pele renovada e firme.",                          "price_points": 600, "image_url": "https://julianafonte.com.br/wp-content/uploads/2018/02/microagulhamento-750x500.jpg", "category_id": 1, "featured": false },
+    { "id": 8, "name": "Drenagem Linfática",            "description": "Melhora da circulação e redução de inchaço com toque especializado.",                     "price_points": 360, "image_url": "https://depilhouse.com.br/wp-content/uploads/2021/11/drenagem-linfatica-1-scaled-1-1.jpg", "category_id": 2, "featured": false },
+    { "id": 9, "name": "Ritual dos Sentidos",           "description": "Imersão sensorial com aromaterapia, calor e massagem integrativa.",                       "price_points": 750, "image_url": "https://media.buddhaspa.com.br/uploads/2022/02/1F6A0831-scaled.jpg", "category_id": 5, "featured": false }
+  ]
+}
