@@ -32,7 +32,7 @@ export function ProductGrid({ products, activeId, storeSlug }: Props) {
               key={p.id}
               product={p}
               index={i}
-              ctaHref={storeSlug ? `#redeem?product=${p.id}&store=${storeSlug}` : undefined}
+              ctaHref={storeSlug ? `https://app.indiqr.com.br/resgate/loja/${p.id}` : undefined}
             />
           ))}
         </div>
