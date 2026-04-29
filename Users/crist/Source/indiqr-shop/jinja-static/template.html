@@ -95,7 +95,7 @@
         <p class="product-desc">{{ product.description }}</p>
         <div class="product-footer">
           <p class="product-price">{{ "{:,}".format(product.price_points).replace(",", ".") }} pts</p>
-          <button class="btn-resgatar">Resgatar</button>
+          <a href="{{ product.resgate_url }}" class="btn-resgatar">Resgatar</a>
         </div>
       </div>
     </article>
