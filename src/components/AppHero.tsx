@@ -15,9 +15,6 @@ export function AppHero({ activeId }: Props) {
         style={{ background: gradient }}
       >
         <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(45deg,rgba(0,0,0,0.02) 0,rgba(0,0,0,0.02) 1px,transparent 1px,transparent 24px)' }} />
-        <div className="absolute inset-0 flex items-center justify-center font-mono text-[10px] tracking-[3px] text-white/20 uppercase">
-          imagem hero — url via api
-        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 pb-12 pl-14">
